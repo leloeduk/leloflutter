@@ -16,10 +16,7 @@ class UserPage extends StatelessWidget {
             margin: EdgeInsets.all(8),
             padding: EdgeInsets.all(10),
             height: 120,
-            width: double.infinity,
             child: ListView.builder(
-              physics: BouncingScrollPhysics(),
-              shrinkWrap: true,
               scrollDirection: Axis.horizontal,
               itemCount: users.length,
               itemBuilder: (context, index) {
