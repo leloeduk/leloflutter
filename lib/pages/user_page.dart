@@ -16,7 +16,10 @@ class UserPage extends StatelessWidget {
             margin: EdgeInsets.all(8),
             padding: EdgeInsets.all(10),
             height: 120,
+            width: double.infinity,
             child: ListView.builder(
+              physics: BouncingScrollPhysics(),
+              shrinkWrap: true,
               scrollDirection: Axis.horizontal,
               itemCount: users.length,
               itemBuilder: (context, index) {
@@ -37,6 +40,47 @@ class UserPage extends StatelessWidget {
               },
             ),
           ),
+
+          // Expanded(
+          //   child: Container(
+          //     decoration: BoxDecoration(
+          //       color: Colors.blue.shade900,
+          //       borderRadius: BorderRadius.only(
+          //         topLeft: Radius.circular(20),
+          //         topRight: Radius.circular(20),
+          //       ),
+          //     ),
+          //     child: ListView.builder(
+          //       itemCount: users.length,
+          //       itemBuilder: (context, index) {
+          //         final currentUserIndex = users[index];
+          //         return Card(
+          //           child: ListTile(
+          //             leading: CircleAvatar(
+          //               backgroundImage: NetworkImage(currentUserIndex.image),
+          //             ),
+
+          //             title: Text(
+          //               currentUserIndex.name,
+          //               style: TextStyle(
+          //                 fontSize: 18,
+          //                 fontWeight: FontWeight.bold,
+          //               ),
+          //             ),
+          //             subtitle: Text(
+          //               currentUserIndex.email,
+          //               style: TextStyle(color: Colors.grey),
+          //             ),
+
+          //             trailing: currentUserIndex.isOnline
+          //                 ? Text(" En ligne 🟢")
+          //                 : Text(" Hors ligne 🔴"),
+          //           ),
+          //         );
+          //       },
+          //     ),
+          //   ),
+          // ),
           Expanded(
             child: Container(
               decoration: BoxDecoration(
