@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:leloflutter/pages/user_page.dart';
+import 'package:leloflutter/pages/custom_bottom_bar.dart';
 
 void main() {
   runApp(MyApp());
@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.grey.shade300),
         useMaterial3: true,
       ),
-      home: UserPage(),
+      home: CustomBottomBar(),
     );
   }
 }
