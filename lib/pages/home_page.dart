@@ -63,24 +63,24 @@ class HomePage extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Container(
-                        height: 100,
-                        width: 100,
+                        height: 70,
+                        width: 70,
                         decoration: BoxDecoration(
                           color: Colors.white,
                           shape: BoxShape.circle,
                         ),
                       ),
                       Container(
-                        height: 100,
-                        width: 100,
+                        height: 70,
+                        width: 70,
                         decoration: BoxDecoration(
                           color: Colors.white,
                           shape: BoxShape.circle,
                         ),
                       ),
                       Container(
-                        height: 100,
-                        width: 100,
+                        height: 70,
+                        width: 70,
                         decoration: BoxDecoration(
                           color: Colors.white,
                           shape: BoxShape.circle,
