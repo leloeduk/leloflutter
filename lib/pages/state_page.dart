@@ -12,64 +12,73 @@ class _StatePageState extends State<StatePage> {
 
   @override
   void initState() {
-    isChanged = false;
+    isChanged = true;
     super.initState();
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade300,
       appBar: AppBar(
-        title: Text(
-          "Stateless et Stateful",
-          style: TextStyle(color: Colors.white),
-        ),
         backgroundColor: Colors.pink.shade900,
+        title: Text(
+          "Stateless Vs Stateful",
+          style: TextStyle(
+            fontSize: 20,
+            fontWeight: FontWeight.bold,
+            color: Colors.white,
+          ),
+        ),
         centerTitle: true,
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(10),
-        child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Row(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    "Photo : ",
-                    style: TextStyle(color: Colors.black, fontSize: 30),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Row(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  "Photo : ",
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.black,
                   ),
-                  Text(
-                    isChanged ? "Image lelo " : "Image logo",
-                    style: TextStyle(
-                      color: Colors.black,
-                      fontSize: 30,
-                      fontWeight: FontWeight.bold,
-                    ),
+                ),
+                Text(
+                  isChanged ? " Image lelo " : "Image Logo ",
+                  style: TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: isChanged ? Colors.black : Colors.pink,
                   ),
-                ],
-              ),
-              Image.asset(
-                isChanged ? "lib/images/lelo.png" : "lib/images/logo.png",
-                height: 200,
-                width: 300,
-              ),
-              OutlinedButton(
-                onPressed: () {
-                  setState(() {
-                    isChanged = !isChanged;
-                  });
-                },
-                child: Text(
-                  "Changez image ",
-                  style: TextStyle(color: Colors.black),
+                ),
+              ],
+            ),
+            Image.asset(
+              isChanged ? "lib/images/lelo.png" : "lib/images/logo.png",
+              width: 300,
+              height: 250,
+            ),
+            OutlinedButton(
+              onPressed: () {
+                setState(() {
+                  isChanged = !isChanged;
+                  print(isChanged);
+                });
+              },
+              child: Text(
+                "Changez Image ",
+                style: TextStyle(
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.black,
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
