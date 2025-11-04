@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:leloflutter/pages/drawer_page.dart';
 import 'package:leloflutter/pages/home_page.dart';
 import 'package:leloflutter/pages/state_page.dart';
 import 'package:leloflutter/pages/user_page.dart';
@@ -19,10 +20,11 @@ class _CustomBottomBarState extends State<CustomBottomBar> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("BottomBar", style: TextStyle(color: Colors.white)),
+        title: Text("Drawer", style: TextStyle(color: Colors.white)),
         centerTitle: true,
         backgroundColor: Colors.pink.shade900,
       ),
+      drawer: DrawerPage(),
       body: screens[selectedCurrentIndex],
       bottomNavigationBar: NavigationBar(
         selectedIndex: selectedCurrentIndex,
