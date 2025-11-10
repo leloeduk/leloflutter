@@ -34,7 +34,7 @@ class DrawerPage extends StatelessWidget {
                     ),
                   ),
                   Text(
-                    "LeloEduk2025@gmail.com",
+                    "LeloEduk2025@gmail.com ",
                     style: TextStyle(color: Colors.grey),
                   ),
                 ],

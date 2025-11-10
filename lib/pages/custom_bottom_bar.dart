@@ -28,7 +28,7 @@ class _CustomBottomBarState extends State<CustomBottomBar> {
       body: screens[selectedCurrentIndex],
       bottomNavigationBar: NavigationBar(
         selectedIndex: selectedCurrentIndex,
-        indicatorColor: Colors.pink,
+        indicatorColor: Colors.pink.shade800,
         onDestinationSelected: (value) {
           setState(() {
             selectedCurrentIndex = value;

@@ -8,7 +8,7 @@ class UserPage extends StatelessWidget {
   Widget build(BuildContext context) {
     final users = Data().users;
     return Scaffold(
-      backgroundColor: Colors.grey.shade300,
+      backgroundColor: Colors.grey.shade200,
       appBar: AppBar(title: Text("Listes des utilisateurs"), centerTitle: true),
       body: Column(
         children: [

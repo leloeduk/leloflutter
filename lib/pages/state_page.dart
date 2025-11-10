@@ -20,7 +20,7 @@ class _StatePageState extends State<StatePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.pink.shade900,
+        backgroundColor: Colors.pink.shade800,
         title: Text(
           "Stateless Vs Stateful",
           style: TextStyle(
