@@ -26,7 +26,7 @@ class DrawerPage extends StatelessWidget {
                     backgroundImage: AssetImage("lib/images/lelo.png"),
                   ),
                   Text(
-                    "LeloEduk",
+                    "LeloEduk 2025",
                     style: TextStyle(
                       fontSize: 18,
                       color: Colors.grey,
