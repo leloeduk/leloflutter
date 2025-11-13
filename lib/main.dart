@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
       title: "LeloFlutter",
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.grey.shade200),
+        colorScheme: ColorScheme.fromSeed(seedColor: Colors.grey.shade300),
         useMaterial3: true,
       ),
       home: CustomBottomBar(),
