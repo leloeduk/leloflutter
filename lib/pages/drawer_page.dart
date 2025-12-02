@@ -8,44 +8,47 @@ class DrawerPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Drawer(
-      backgroundColor: Colors.white,
+      backgroundColor: Colors.grey.shade300,
       child: Column(
         children: [
           Container(
             height: 200,
-            width: double.infinity,
-            color: Colors.pink.shade900,
+            color: Colors.pink.shade800,
+
             child: Center(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   CircleAvatar(
-                    radius: 40,
+                    radius: 50,
                     backgroundColor: Colors.grey,
                     backgroundImage: AssetImage("lib/images/lelo.png"),
                   ),
                   Text(
-                    "LeloEduk 2025",
+                    "Lelo Eduk",
                     style: TextStyle(
-                      fontSize: 18,
-                      color: Colors.grey,
+                      fontSize: 20,
                       fontWeight: FontWeight.bold,
+                      color: Colors.white,
                     ),
                   ),
                   Text(
-                    "LeloEduk2025@gmail.com ",
-                    style: TextStyle(color: Colors.grey),
+                    "Lelomaurice2000@gmail.com",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                    ),
                   ),
                 ],
               ),
             ),
           ),
           Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: const EdgeInsets.all(10),
             child: Wrap(
+              spacing: 10,
               runSpacing: 8,
-              spacing: 6,
               children: [
                 ListTile(
                   onTap: () {
@@ -58,36 +61,38 @@ class DrawerPage extends StatelessWidget {
                 ListTile(
                   onTap: () {},
                   leading: Icon(Icons.favorite),
-                  title: Text("favorite"),
-                  trailing: Icon(Icons.arrow_forward),
-                ),
-                ListTile(
-                  onTap: () {
-                    Navigator.of(
-                      context,
-                    ).push(MaterialPageRoute(builder: (context) => UserPage()));
-                  },
-                  leading: Icon(Icons.person_2),
-                  title: Text("Users"),
+                  title: Text("Favorite"),
                   trailing: Icon(Icons.arrow_forward),
                 ),
                 ListTile(
                   onTap: () {
                     Navigator.of(context).pop();
+                    Navigator.of(
+                      context,
+                    ).push(MaterialPageRoute(builder: (context) => UserPage()));
+                  },
+                  leading: Icon(Icons.people),
+                  title: Text("Users"),
+                  trailing: Icon(Icons.arrow_forward),
+                ),
+                ListTile(
+                  onTap: () {
                     Navigator.of(context).push(
                       MaterialPageRoute(builder: (context) => StatePage()),
                     );
                   },
                   leading: Icon(Icons.settings),
-                  title: Text("Parametres"),
+                  title: Text("settings"),
                   trailing: Icon(Icons.arrow_forward),
                 ),
               ],
             ),
           ),
+
           Spacer(),
+
           Padding(
-            padding: const EdgeInsets.all(12),
+            padding: const EdgeInsets.all(10),
             child: OutlinedButton(onPressed: () {}, child: Text("Déconnexion")),
           ),
         ],
