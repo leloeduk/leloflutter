@@ -12,7 +12,7 @@ class DrawerPage extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            height: 200,
+            height: 210,
             color: Colors.pink.shade800,
 
             child: Center(
