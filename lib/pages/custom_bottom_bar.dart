@@ -22,7 +22,7 @@ class _CustomBottomBarState extends State<CustomBottomBar> {
       appBar: AppBar(
         title: Text("Drawer", style: TextStyle(color: Colors.white)),
         centerTitle: true,
-        backgroundColor: Colors.pink.shade900,
+        backgroundColor: Colors.pink.shade800,
       ),
       drawer: DrawerPage(),
       body: screens[selectedCurrentIndex],
